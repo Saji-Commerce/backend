@@ -1,0 +1,32 @@
+line-length = 88
+indent-width = 4
+target-version = "py314"
+
+[lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "UP",
+    "B",
+    "C4",
+    "SIM",
+    "RUF",
+    "N",
+]
+
+ignore = [
+    "E501",
+]
+
+fixable = ["ALL"]
+
+[lint.per-file-ignores]
+"**/migrations/*.py" = ["ALL"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+skip-magic-trailing-comma = false
