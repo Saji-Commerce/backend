@@ -2,6 +2,10 @@ line-length = 88
 indent-width = 4
 target-version = "py314"
 
+extend-exclude = [
+    "**/migrations",
+]
+
 [lint]
 select = [
     "E",
@@ -18,12 +22,8 @@ select = [
 
 ignore = [
     "E501",
+    "RUF012",
 ]
-
-fixable = ["ALL"]
-
-[lint.per-file-ignores]
-"**/migrations/*.py" = ["ALL"]
 
 [format]
 quote-style = "double"
