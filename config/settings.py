@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "apps.accounts.apps.AccountsConfig",
+    "apps.otp.apps.OtpConfig",
     "rest_framework",
     "rest_framework_simplejwt",
 ]
