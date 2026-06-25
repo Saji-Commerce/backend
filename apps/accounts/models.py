@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser
 from django.db import models
 
-from accounts.consts import AccountType
+from apps.accounts.consts import AccountType
 from utils.models import CreateUpdateTracker, UUIDPrimaryKey
 
 
