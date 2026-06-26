@@ -11,19 +11,6 @@ class User(UUIDPrimaryKey, CreateUpdateTracker, AbstractBaseUser):
         unique=True,
         db_index=True,
     )
-    email = models.EmailField(
-        unique=True,
-        null=True,
-        blank=True,
-    )
-    first_name = models.CharField(
-        max_length=100,
-        blank=True,
-    )
-    last_name = models.CharField(
-        max_length=100,
-        blank=True,
-    )
     account_type = models.CharField(
         max_length=20,
         choices=AccountType.choices,
@@ -32,5 +19,17 @@ class User(UUIDPrimaryKey, CreateUpdateTracker, AbstractBaseUser):
         default=True,
     )
 
-    EMAIL_FIELD = "email"
     USERNAME_FIELD = "phone_number"
+
+    class Meta:
+        indexes = [
+            models.Index(
+                fields=["phone_number", "account_type"],
+            ),
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["phone_number", "account_type"],
+                name="unique_user_per_phone_number_and_account_type",
+            )
+        ]
