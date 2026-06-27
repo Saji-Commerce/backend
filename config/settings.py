@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "apps.accounts.apps.AccountsConfig",
     "apps.otp.apps.OtpConfig",
+    "apps.customers.apps.CustomersConfig",
     "rest_framework",
     "rest_framework_simplejwt",
 ]
