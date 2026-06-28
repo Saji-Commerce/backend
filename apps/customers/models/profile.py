@@ -10,7 +10,6 @@ class CustomerProfile(UUIDPrimaryKey, CreateUpdateTracker):
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
-        related_name="customer_profile",
     )
     first_name = models.CharField(
         max_length=255,
