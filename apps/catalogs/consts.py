@@ -1,8 +1,8 @@
-from django.db import models
+from django.db.models import TextChoices
 from django.utils.translation import gettext_lazy as _
 
 
-class ProductState(models.TextChoices):
+class ProductState(TextChoices):
     INITIALIZE = "INITIALIZE", _("Initialize")
     READY_TO_PUBLISH = "READY_TO_PUBLISH", _("Ready to publish")
     UNDER_REVIEW = "UNDER_REVIEW", _("Under review")
@@ -10,7 +10,7 @@ class ProductState(models.TextChoices):
     APPROVED = "APPROVED", _("Approved")
 
 
-class SpecificationValueType(models.TextChoices):
+class SpecificationValueType(TextChoices):
     TEXT = "TEXT", _("Text")
     LONG_TEXT = "LONG_TEXT", _("Long Text")
     INTEGER = "INTEGER", _("Integer")
