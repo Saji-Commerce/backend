@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "apps.otp.apps.OtpConfig",
     "apps.customers.apps.CustomersConfig",
     "apps.catalogs.apps.CatalogsConfig",
+    "apps.sellers.apps.SellersConfig",
     "rest_framework",
     "rest_framework_simplejwt",
 ]
